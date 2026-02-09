@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "S996uAnqmxo=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\ohel-\\קורס תלפיות הייטק\\selenium\\selenium.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ohel-\\.nuget\\packages\\nunit\\4.4.0\\nunit.4.4.0.nupkg.sha512",
+    "C:\\Users\\ohel-\\.nuget\\packages\\selenium.webdriver\\4.40.0\\selenium.webdriver.4.40.0.nupkg.sha512",
+    "C:\\Users\\ohel-\\.nuget\\packages\\selenium.webdriver.chromedriver\\144.0.7559.13300\\selenium.webdriver.chromedriver.144.0.7559.13300.nupkg.sha512"
+  ],
+  "logs": []
+}
