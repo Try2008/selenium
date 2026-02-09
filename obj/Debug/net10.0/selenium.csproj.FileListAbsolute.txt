@@ -20,3 +20,4 @@ C:\Users\ohel-\קורס תלפיות הייטק\selenium\obj\Debug\net10.0\selen
 C:\Users\ohel-\קורס תלפיות הייטק\selenium\obj\Debug\net10.0\selenium.csproj.Up2Date
 C:\Users\ohel-\קורס תלפיות הייטק\selenium\bin\Debug\net10.0\nunit.framework.dll
 C:\Users\ohel-\קורס תלפיות הייטק\selenium\bin\Debug\net10.0\nunit.framework.legacy.dll
+C:\Users\ohel-\קורס תלפיות הייטק\selenium\obj\Debug\net10.0\selenium.sourcelink.json
