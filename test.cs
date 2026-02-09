@@ -17,7 +17,7 @@ namespace AutomationProject
 
                 NavigateToSite(driver);
                 HandleCookiePopup(driver, wait);
-
+                wait = new WebDriverWait(driver, TimeSpan.FromSeconds(2));
                 // Origin
                 SelectCity(driver, wait, "Vienna", "input[data-test-id='search-departure-station']", "Origin");
                 
@@ -29,6 +29,7 @@ namespace AutomationProject
                 // Dates
                 SelectFlexibleDates(driver, wait);
 
+                wait = new WebDriverWait(driver, TimeSpan.FromSeconds(15));
                 // Sort
                 SelectSortByPrice(driver, wait);
 
