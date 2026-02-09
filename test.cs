@@ -26,6 +26,9 @@ namespace AutomationProject
                 // Note: WizzAir often uses 'search-arrival-station' for destination. 
                 // Fallback to 'placeholder' if ID fails.
 
+                // Dates
+                SelectFlexibleDates(driver, wait);
+
                 Console.WriteLine("Process completed successfully. Waiting 5 seconds...");
                 System.Threading.Thread.Sleep(5000); 
             }
@@ -144,6 +147,21 @@ namespace AutomationProject
                 // If suggestion click fails, try Enter key as fallback
                 Console.WriteLine($"Suggestion for '{city}' not clicked (timeout). Trying Enter key...");
                 input.SendKeys(Keys.Enter);
+            }
+        }
+
+        static void SelectFlexibleDates(IWebDriver driver, WebDriverWait wait)
+        {
+            Console.WriteLine("Selecting 'Flexible on dates'...");
+            try
+            {
+                var flexButton = wait.Until(d => d.FindElement(By.XPath("//*[contains(text(), 'Flexible on dates')]")));
+                flexButton.Click();
+                Console.WriteLine("'Flexible on dates' selected.");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Could not select 'Flexible on dates': " + ex.Message);
             }
         }
     }
