@@ -29,6 +29,9 @@ namespace AutomationProject
                 // Dates
                 SelectFlexibleDates(driver, wait);
 
+                // Sort
+                SelectSortByPrice(driver, wait);
+
                 Console.WriteLine("Process completed successfully. Waiting 5 seconds...");
                 System.Threading.Thread.Sleep(5000); 
             }
@@ -164,5 +167,28 @@ namespace AutomationProject
                 Console.WriteLine("Could not select 'Flexible on dates': " + ex.Message);
             }
         }
+
+
+        static void SelectSortByPrice(IWebDriver driver, WebDriverWait wait)
+        {
+            Console.WriteLine("Opening sort dropdown...");
+            try
+            {
+                // Click the dropdown trigger first
+                var sortTrigger = wait.Until(d => d.FindElement(By.CssSelector("button[data-test='sort']")));
+                sortTrigger.Click();
+
+                // Wait for the dropdown options to appear and select 'Price low to high'
+                var sortOption = wait.Until(d => d.FindElement(By.XPath("//span[contains(text(), 'Price low to high')]")));
+                sortOption.Click();
+                
+                Console.WriteLine("Sort 'Price low to high' selected.");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Could not select sort option: " + ex.Message);
+            }
+        }
+
     }
 }
